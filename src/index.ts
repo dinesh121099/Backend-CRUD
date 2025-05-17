@@ -40,7 +40,8 @@ client
     res.end("Requested URL Not Found");
   });
 
-  server.listen(3000, () => {
-    console.log("Server running at http://localhost:3000");
+  const port: any = process.env.PORT;
+  server.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
   });
 });
